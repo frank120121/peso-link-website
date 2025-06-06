@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://peso.link/sitemap.xml
+
+# Block access to system files
+Disallow: /.git/
+Disallow: /_site/
+Disallow: /assets/css/
+Disallow: /README.md
+
+# Allow all pages for search engines
+Allow: /privacy
+Allow: /terms
+Allow: /contact
+Allow: /data-deletion
