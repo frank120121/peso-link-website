@@ -1,1 +1,111 @@
 
+# Site Settings
+title: "Peso.link - WhatsApp Loyalty Platform"
+description: "Earn points, get rewards through WhatsApp messaging. Join our customer loyalty program for restaurants and businesses in Mexico."
+url: "https://peso.link"
+baseurl: ""
+
+# Author/Company Information
+author:
+  name: "Peso.link"
+  email: "admin@peso.link"
+  
+# SEO and Social Media
+lang: "en"
+locale: "en_US"
+twitter:
+  username: peso_link
+  card: summary
+
+# GitHub Pages Settings
+repository: "yourusername/peso-link-website"
+github_username: yourusername
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+timezone: America/Mexico_City
+
+# Jekyll Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - package.json
+  - package-lock.json
+
+# Include files
+include:
+  - _redirects
+  - .htaccess
+
+# Collections (if you plan to add blog posts later)
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      author: "Peso.link"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Peso.link"
+
+# Custom variables for your site
+business:
+  name: "Peso.link"
+  tagline: "WhatsApp Loyalty Platform"
+  phone: "+52 XXX XXX XXXX"
+  email: "admin@peso.link"
+  privacy_email: "privacy@peso.link"
+  address: "Your Business Address, Mexico"
+  
+# Social Media Links (for future use)
+social:
+  whatsapp: "https://wa.me/52XXXXXXXXXX"
+  facebook: "https://facebook.com/peso.link"
+  instagram: "https://instagram.com/peso.link"
+  
+# Google Analytics (add when ready)
+# google_analytics: "GA_MEASUREMENT_ID"
+
+# Meta/Facebook verification (add when ready)
+# facebook:
+#   app_id: "your_app_id"
+#   publisher: "your_facebook_page"
+
+# SEO Settings
+seo:
+  type: "Organization"
+  name: "Peso.link"
+  links:
+    - "https://peso.link"
+    - "https://wa.me/52XXXXXXXXXX"
+
+# Sitemap settings
+sitemap:
+  exclude:
+    - "/404.html"
+    - "/assets/"
