@@ -48,11 +48,17 @@
 
     section { padding: 5rem 0; }
     section h2 { text-align: center; font-size: 2.4rem; margin-bottom: 2rem; }
-    .grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      justify-items: center;
+    }
 
     .card {
       background: white; border-radius: 12px; padding: 2rem;
       box-shadow: 0 6px 18px rgba(0,0,0,0.06); text-align: center;
+      max-width: 300px;
     }
     .card h3 { color: var(--primary); margin-bottom: 1rem; }
     .card p { color: #555; font-size: 1rem; }
@@ -65,11 +71,11 @@
 
     .cta-section {
       background: linear-gradient(45deg, #128C7E, #25D366); color: white;
-      text-align: center; padding: 5rem 1rem;
+      text-align: center; padding: 6rem 1rem 7rem;
     }
     .cta-section h2 { font-size: 2.6rem; margin-bottom: 1rem; }
     .cta-section p { font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: auto; }
-    .cta-section .btn { margin-top: 2rem; background: white; color: var(--primary); }
+    .cta-section .btn { margin-top: 2.5rem; background: white; color: var(--primary); }
 
     footer {
       background: #1b1f23; color: #ccc; text-align: center;
@@ -116,20 +122,20 @@
           <p>Trigger recognition instantly at the moment of purchase using CoDi or QR verification.</p>
         </div>
         <div class="card">
-          <h3>🔐 Bank-Grade Security</h3>
-          <p>Encrypted data, JWT tokens, and webhook signature validation built-in.</p>
+          <h3>🇲🇽 Made for Mexico</h3>
+          <p>Optimized for CoDi, STP, and digital adoption in the Mexican retail economy.</p>
         </div>
         <div class="card">
-          <h3>📊 Insight-Driven Loyalty</h3>
-          <p>Track spend, preferences, redemption patterns — turn data into smarter loyalty.</p>
+          <h3>🔐 Bank-Grade Security</h3>
+          <p>Encrypted data, JWT tokens, and webhook signature validation built-in.</p>
         </div>
         <div class="card">
           <h3>🎯 Fully API-Driven</h3>
           <p>Integrate loyalty into your POS, CRM, website, or app with developer-friendly docs.</p>
         </div>
         <div class="card">
-          <h3>🇲🇽 Made for Mexico</h3>
-          <p>Optimized for CoDi, STP, and digital adoption in the Mexican retail economy.</p>
+          <h3>📊 Insight-Driven Loyalty</h3>
+          <p>Track spend, preferences, redemption patterns — turn data into smarter loyalty.</p>
         </div>
       </div>
     </div>
@@ -138,7 +144,7 @@
   <section class="success" id="success">
     <div class="container">
       <h2>Customer Spotlight: Brasas El Gordo</h2>
-      <img src="https://via.placeholder.com/160x60?text=Brasas+El+Gordo" alt="Brasas El Gordo logo">
+      <img src="/assets/images/Menu(1%20de%202)%20(18%20x%2030%20in)%20(14%20x%208.5%20in)%20(3).png" alt="Brasas El Gordo logo">
       <blockquote>
         "Our customers love the simplicity. They just scan, buy, and earn. PESOLINK has doubled our return visits."
       </blockquote>
