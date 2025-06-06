@@ -3,169 +3,268 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elevate Loyalty. Empower Relationships.</title>
-  <meta name="description" content="PESOLINK empowers businesses with fintech-grade loyalty infrastructure: mobile-first, API-driven, and privacy-conscious." />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <title>PESOLINK: Elevate Loyalty. Empower Relationships.</title>
+  <meta name="description" content="PESOLINK is the premium fintech loyalty platform built for digitally savvy brands and consumers in Mexico. API-driven, mobile-first, and WhatsApp-powered.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #25D366;
-      --dark: #1b1f23;
-      --gray: #f0f2f5;
-      --light-gray: #fafbfc;
-      --accent-blue: #3498db;
-      --accent-green: #2ecc71;
-      --max-width: 1200px;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #0f0f0f;
+      background-color: #ffffff;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: var(--gray); color: #333; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
+    header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      background-color: rgba(15, 15, 15, 0.9);
+      backdrop-filter: blur(8px);
+      transition: background-color 0.3s ease;
+    }
+    header.scrolled {
+      background-color: #0f0f0f;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
 
-    .container { max-width: var(--max-width); margin: auto; padding: 0 20px; }
-
-    header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 1000; }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 0; }
-    .logo { font-size: 1.8rem; font-weight: 700; color: var(--primary); }
-    nav ul { list-style: none; display: flex; gap: 2rem; }
-    nav li a { font-weight: 500; color: #555; transition: 0.2s ease-in-out; }
-    nav li a:hover { color: var(--primary); }
+    nav .container, footer .container, .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    nav {
+      padding: 1.2rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #25D366;
+      text-decoration: none;
+    }
+    nav ul {
+      display: flex;
+      align-items: center; /* add this */
+      gap: 2rem;
+      list-style: none;
+    }
+    nav .btn:hover {
+  background-color: #1ebe5d;
+  color: #fff;
+    }
+    nav .btn {
+      padding: 10px 20px;
+      font-size: 0.95rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+    }
+    nav a:hover, nav a.active { color: #25D366; }
 
     .hero {
-      background: linear-gradient(135deg, #0f7a6f, #1eaf53);
+      background-color: #0f0f0f;
       color: white;
-      padding: 6rem 0;
+      min-height: 100vh; /* full screen height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* vertical centering */
+      align-items: center;     /* horizontal centering */
+      padding: 2rem;           /* fallback inner padding */
       text-align: center;
     }
-    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.3rem; max-width: 800px; margin: auto; opacity: 0.95; }
-    .hero .cta { margin-top: 2rem; }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      color: #ccc;
+    }
     .btn {
-      background: white; color: var(--primary);
-      padding: 0.9rem 2rem; border-radius: 50px; font-weight: 600;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s;
+      display: inline-block;
+      padding: 14px 32px;
+      background: #25D366;
+      color: #ffffff;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
     }
-    .btn:hover { transform: translateY(-3px); background: #eaeaea; }
+    .btn:hover { background: #e0e0e0; }
 
-    section { padding: 5rem 0; }
-    section h2 { text-align: center; font-size: 2.4rem; margin-bottom: 2rem; }
-    .grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-
-    .card {
-      background: white; border-radius: 12px; padding: 2rem;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06); text-align: center;
+    section { padding: 5rem 1.5rem; }
+    section h2 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 2rem;
     }
-    .card h3 { color: var(--primary); margin-bottom: 1rem; }
-    .card p { color: #555; font-size: 1rem; }
 
-    .success { background: var(--light-gray); text-align: center; }
-    .success img { max-width: 160px; margin: 1rem auto; filter: grayscale(100%); transition: 0.3s; }
-    .success img:hover { filter: grayscale(0%); }
-    .success blockquote { font-size: 1.2rem; font-style: italic; margin: 1.5rem auto; max-width: 800px; color: #444; }
-    .success cite { font-weight: bold; font-size: 1rem; color: #333; display: block; margin-top: 1rem; }
-
-    .cta-section {
-      background: linear-gradient(45deg, #128C7E, #25D366); color: white;
-      text-align: center; padding: 5rem 1rem;
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
     }
-    .cta-section h2 { font-size: 2.6rem; margin-bottom: 1rem; }
-    .cta-section p { font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: auto; }
-    .cta-section .btn { margin-top: 2rem; background: white; color: var(--primary); }
+    .feature {
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+    .feature h3 {
+      font-size: 1.3rem;
+      color: #25D366;
+      margin-bottom: 0.5rem;
+    }
+    .feature p {
+      font-size: 1rem;
+      color: #ffffff;
+    }
+
+    .testimonial {
+      background: #1a1a1a;
+      border-left: 15px solid #25D366;
+      border-radius: 25px;
+      max-width: 900px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .testimonial img {
+      max-width: 180px;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial blockquote {
+      font-style: italic;
+      color: #ffffff;
+    }
+    .testimonial cite {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #25D366;
+    }
+
+    #contact {
+      background-color: #0f0f0f;
+      border-right: 15px solid #25D366;
+      color: #ffffff;
+      border-radius: 25px;
+      margin: 5rem 30rem;
+      padding: 2rem;
+    }
 
     footer {
-      background: #1b1f23; color: #ccc; text-align: center;
-      padding: 3rem 1rem; font-size: 0.9rem;
+      background-color: #0f0f0f;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      color: #ffffff;
     }
-    footer a { color: #ccc; margin: 0 1rem; }
-    footer a:hover { color: white; text-decoration: underline; }
+    footer ul {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      list-style: none;
+    }
+    footer a {
+      color: #888;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .footer-logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #25D366;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
   <header>
     <nav class="container">
-      <a href="/" class="logo">PESOLINK</a>
+      <a href="#" class="logo">PESOLINK</a>
       <ul>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#success">Success Stories</a></li>
+        <li><a href="#features">Why PESOLINK</a></li>
+        <li><a href="#success">Success</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="/privacy.html">Privacy</a></li>
-        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="#contact" class="btn">Request Access</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="container">
+  <main>
+    <section class="hero">
       <h1>Elevate Loyalty. Empower Relationships.</h1>
-      <p>PESOLINK powers modern loyalty experiences with WhatsApp, QR codes, and real-time CoDi engagement — all backed by enterprise-grade infrastructure.</p>
-      <div class="cta">
-        <a href="#contact" class="btn">Request Demo</a>
-      </div>
-    </div>
-  </section>
+      <p>PESOLINK is the fintech loyalty platform for modern brands. API-driven. WhatsApp-native. CoDi-enabled. Built for Mexico.</p>
+      <a href="#contact" class="btn">Request Access</a>
+    </section>
 
-  <section id="features">
-    <div class="container">
-      <h2>Why Businesses Choose PESOLINK</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>📱 WhatsApp-Based</h3>
-          <p>Frictionless customer onboarding, point balance checks, and redemptions via WhatsApp.</p>
-        </div>
-        <div class="card">
-          <h3>⚡ Real-Time Rewards</h3>
-          <p>Trigger recognition instantly at the moment of purchase using CoDi or QR verification.</p>
-        </div>
-        <div class="card">
-          <h3>🔐 Bank-Grade Security</h3>
-          <p>Encrypted data, JWT tokens, and webhook signature validation built-in.</p>
-        </div>
-        <div class="card">
-          <h3>📊 Insight-Driven Loyalty</h3>
-          <p>Track spend, preferences, redemption patterns — turn data into smarter loyalty.</p>
-        </div>
-        <div class="card">
-          <h3>🎯 Fully API-Driven</h3>
-          <p>Integrate loyalty into your POS, CRM, website, or app with developer-friendly docs.</p>
-        </div>
-        <div class="card">
-          <h3>🇲🇽 Made for Mexico</h3>
-          <p>Optimized for CoDi, STP, and digital adoption in the Mexican retail economy.</p>
-        </div>
+    <section id="features" style="background-color: #25D366;">
+      <h2 style="color: #0f0f0f">Why Businesses Choose PESOLINK</h2>
+      <div class="container feature-grid">
+        <div class="feature"><h3>📱 WhatsApp-Based</h3><p>Frictionless onboarding, balance checks, and redemptions — all via WhatsApp. No apps. No friction.</p></div>
+        <div class="feature"><h3>⚡ Real-Time Rewards</h3><p>Trigger recognition instantly at purchase using CoDi, QR, or integrated APIs.</p></div>
+        <div class="feature"><h3>🔐 Bank-Grade Security</h3><p>Encrypted data, JWT tokens, webhook signature verification — security at the core.</p></div>
+        <div class="feature"><h3>📊 Insight-Driven Loyalty</h3><p>Track spend, redemption, and preferences. Design smarter, more profitable campaigns.</p></div>
+        <div class="feature"><h3>🎯 Fully API-Driven</h3><p>Integrate loyalty into your POS, CRM, e-commerce, or kiosk systems — fast.</p></div>
+        <div class="feature"><h3>🇲🇽 Made for Mexico</h3><p>Built for CoDi, STP, and the realities of the Mexican digital economy.</p></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="success" id="success">
-    <div class="container">
-      <h2>Success Stories</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="/assets/images/Menu(1%20de%202)%20(18%20x%2030%20in)%20(14%20x%208.5%20in)%20(3).png" alt="Brasas El Gordo logo" style="max-height: 60px; margin-bottom: 1rem;">
-          <blockquote>
-            "Our customers love the simplicity. They just scan, buy, and earn. PESOLINK has doubled our return visits."
-          </blockquote>
-          <cite>— Management, Brasas El Gordo</cite>
+    <section id="success">
+      <h2>Merchant Success Story</h2>
+      <div class="container testimonial">
+        <img src="/assets/images/Menu(1%20de%202)%20(18%20x%2030%20in)%20(14%20x%208.5%20in)%20(3).png" alt="Brasas El Gordo logo">
+        <blockquote>
+          “We integrated PESOLINK to offer real-time rewards with QR and CoDi — and customers love it. Our team saves time, redemptions are instant, and our loyalty has become a true competitive edge.”
+        </blockquote>
+        <cite>— Management, Brasas El Gordo</cite>
+      </div>
+    </section>
+
+  <section id="contact">
+    <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2rem;">
+      <div style="flex: 1; min-width: 260px; text-align: left;">
+        <h2 style="font-size: 2.6rem; color: white; margin-bottom: 1rem;">Let’s Build  <span style="color: #25D366;">Loyalty</span> That Matters.</h2>
+        <div style="display: flex; justify-content: center; margin-top: 1.5rem;">
+          <a href="/contact.html" class="btn">Start Your Journey</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="cta-section" id="contact">
-    <div class="container">
-      <h2>Bring Loyalty into the Fintech Age</h2>
-      <p>Let’s talk about how PESOLINK can help your business increase customer retention and grow revenue with every transaction.</p>
-      <a href="/contact.html" class="btn">Get in Touch</a>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 PESOLINK. All rights reserved.</p>
-    <p>
-      <a href="/privacy.html">Privacy</a> |
-      <a href="/terms.html">Terms</a> |
-      <a href="/data-deletion.html">Data Deletion</a> |
-      <a href="/contact.html">Contact</a>
-    </p>
+    <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
+      <a href="#" class="footer-logo">PESOLINK</a>
+      <div style="flex: 1; text-align: right;">
+        <p style="margin: 0;">&copy; 2024 PESOLINK. All rights reserved.</p>
+        <ul style="display: flex; gap: 1.5rem; justify-content: flex-end; list-style: none; padding: 0; margin: 0.5rem 0 0;">
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="/data-deletion.html">Data</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
