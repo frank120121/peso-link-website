@@ -1,487 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PESOLINK: Intelligent Loyalty Platform for Businesses</title>
-    <meta name="description" content="PESOLINK empowers businesses with a modern, API-driven loyalty platform to foster genuine customer relationships, drive repeat purchases, and gain valuable insights.">
-    <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PESOLINK – Fintech Loyalty Infrastructure</title>
+  <meta name="description" content="PESOLINK empowers businesses with fintech-grade loyalty infrastructure: mobile-first, API-driven, and privacy-conscious." />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --primary: #25D366;
+      --dark: #1b1f23;
+      --gray: #f0f2f5;
+      --light-gray: #fafbfc;
+      --accent-blue: #3498db;
+      --accent-green: #2ecc71;
+      --max-width: 1200px;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f0f2f5; /* Light grey background for a modern feel */
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: var(--gray); color: #333; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    .container { max-width: var(--max-width); margin: auto; padding: 0 20px; }
 
-        /* Header */
-        header {
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* Slightly stronger shadow */
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 1000; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 0; }
+    .logo { font-size: 1.8rem; font-weight: 700; color: var(--primary); }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav li a { font-weight: 500; color: #555; transition: 0.2s ease-in-out; }
+    nav li a:hover { color: var(--primary); }
 
-        nav {
-            padding: 1rem 0;
-        }
+    .hero {
+      background: linear-gradient(135deg, #0f7a6f, #1eaf53);
+      color: white;
+      padding: 6rem 0;
+      text-align: center;
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.3rem; max-width: 800px; margin: auto; opacity: 0.95; }
+    .hero .cta { margin-top: 2rem; }
+    .btn {
+      background: white; color: var(--primary);
+      padding: 0.9rem 2rem; border-radius: 50px; font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s;
+    }
+    .btn:hover { transform: translateY(-3px); background: #eaeaea; }
 
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    section { padding: 5rem 0; }
+    section h2 { text-align: center; font-size: 2.4rem; margin-bottom: 2rem; }
+    .grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 
-        nav .logo {
-            color: #25D366;
-            text-decoration: none;
-            font-size: 1.8rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-        }
+    .card {
+      background: white; border-radius: 12px; padding: 2rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06); text-align: center;
+    }
+    .card h3 { color: var(--primary); margin-bottom: 1rem; }
+    .card p { color: #555; font-size: 1rem; }
 
-        nav .logo svg {
-            margin-right: 8px;
-            fill: #25D366;
-        }
+    .success { background: var(--light-gray); text-align: center; }
+    .success img { max-width: 160px; margin: 1rem auto; filter: grayscale(100%); transition: 0.3s; }
+    .success img:hover { filter: grayscale(0%); }
+    .success blockquote { font-size: 1.2rem; font-style: italic; margin: 1.5rem auto; max-width: 800px; color: #444; }
+    .success cite { font-weight: bold; font-size: 1rem; color: #333; display: block; margin-top: 1rem; }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem; /* Increased gap for better spacing */
-        }
+    .cta-section {
+      background: linear-gradient(45deg, #128C7E, #25D366); color: white;
+      text-align: center; padding: 5rem 1rem;
+    }
+    .cta-section h2 { font-size: 2.6rem; margin-bottom: 1rem; }
+    .cta-section p { font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: auto; }
+    .cta-section .btn { margin-top: 2rem; background: white; color: var(--primary); }
 
-        nav a {
-            text-decoration: none;
-            color: #555; /* Slightly softer color */
-            font-weight: 500;
-            transition: color 0.3s ease, transform 0.2s ease; /* Added transform for subtle hover effect */
-        }
-
-        nav a:hover,
-        nav a.active {
-            color: #25D366;
-            transform: translateY(-2px);
-        }
-
-        /* Hero Section */
-        .hero {
-            /* Adjusted gradient colors to be darker for better white text readability */
-            background: linear-gradient(135deg, #0f7a6f, #1eaf53);
-            color: white;
-            padding: 6rem 0; /* More vertical padding */
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before { /* Subtle background pattern/texture */
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.05"><path d="M3 0L6 3L3 6L0 3L3 0Z"></path></g></svg>'); /* Reduced opacity slightly */
-            opacity: 0.1;
-            z-index: 0;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem; /* Larger heading */
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.35rem; /* Larger paragraph */
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn {
-            display: inline-block;
-            background: white;
-            color: #25D366;
-            padding: 14px 35px; /* Larger buttons */
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Added shadow for depth */
-        }
-
-        .btn:hover {
-            transform: translateY(-3px); /* More pronounced lift */
-            background-color: #e0e0e0; /* Subtle background change on hover */
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-            margin-left: 1rem;
-            box-shadow: none;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255,255,255,0.1);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        /* Section Styling */
-        section {
-            padding: 5rem 0; /* Consistent padding for all sections */
-            position: relative;
-        }
-
-        section:nth-of-type(odd) {
-            background: #f8f9fa;
-        }
-
-        section:nth-of-type(even) {
-            background: white;
-        }
-
-        section h2 {
-            text-align: center;
-            margin-bottom: 3.5rem; /* More space below headings */
-            font-size: 2.8rem; /* Larger section headings */
-            color: #2c3e50; /* Darker, professional heading color */
-        }
-
-        section p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        /* Feature Grid */
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem; /* Increased gap */
-        }
-
-        .feature {
-            background: white;
-            padding: 2.5rem; /* More padding */
-            border-radius: 12px; /* Slightly more rounded corners */
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Refined shadow */
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .feature:hover {
-            transform: translateY(-5px); /* Lift on hover */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .feature h3 {
-            font-size: 1.6rem; /* Larger feature titles */
-            margin-bottom: 1rem;
-            color: #25D366; /* Green for feature titles */
-        }
-
-        .feature p {
-            font-size: 1rem;
-            color: #666;
-        }
-
-        /* Success Story Section */
-        .success-story {
-            background: #e6f7ed; /* Light green background */
-            padding: 5rem 0;
-            text-align: center;
-        }
-
-        .success-story h2 {
-            color: #128C7E;
-        }
-
-        .success-story .client-logo {
-            max-width: 200px;
-            margin: 0 auto 2rem auto;
-            filter: grayscale(100%); /* Optional: Make client logos grayscale until hover */
-            transition: filter 0.3s ease;
-        }
-
-        .success-story .client-logo:hover {
-            filter: grayscale(0%);
-        }
-
-        .success-story blockquote {
-            font-size: 1.4rem;
-            font-style: italic;
-            max-width: 900px;
-            margin: 0 auto 2rem auto;
-            color: #444;
-        }
-
-        .success-story .testimonial-author {
-            font-weight: bold;
-            font-size: 1.1rem;
-            color: #333;
-        }
-
-        /* Fintech Edge Section */
-        .fintech-edge .feature {
-            background: #fff;
-            border: 1px solid #eee;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
-        }
-        .fintech-edge .feature h3 {
-            color: #3498db; /* Blue for fintech features */
-        }
-
-        /* Call to Action Section */
-        .cta-section {
-            background: linear-gradient(45deg, #128C7E, #25D366);
-            color: white;
-            text-align: center;
-            padding: 6rem 0;
-        }
-
-        .cta-section h2 {
-            color: white;
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-section p {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-
-        /* Footer */
-        footer {
-            background: #2c3e50; /* Darker footer */
-            color: white;
-            padding: 3rem 0; /* More padding */
-            text-align: center;
-        }
-
-        footer .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        footer .copyright {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        footer ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-        }
-
-        footer a:hover {
-            opacity: 1;
-            text-decoration: underline;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav .container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            nav ul {
-                gap: 1.5rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            section h2 {
-                font-size: 2rem;
-            }
-
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .success-story blockquote {
-                font-size: 1.2rem;
-            }
-
-            footer .container {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-
-            footer ul {
-                gap: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-    </style>
+    footer {
+      background: #1b1f23; color: #ccc; text-align: center;
+      padding: 3rem 1rem; font-size: 0.9rem;
+    }
+    footer a { color: #ccc; margin: 0 1rem; }
+    footer a:hover { color: white; text-decoration: underline; }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <a href="/" class="logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-                    PESOLINK
-                </a>
-                <ul>
-                    <li><a href="/" class="active">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#success-stories">Clients</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="/privacy.html">Privacy</a></li>
-                    <li><a href="/terms.html">Terms</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav class="container">
+      <a href="/" class="logo">PESOLINK</a>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#success">Case Study</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>PESOLINK: Beyond Points. Building Lasting Customer Loyalty.</h1>
-                <p>Empower your business with an intelligent, API-driven loyalty platform that fosters genuine relationships, drives repeat purchases, and unlocks valuable insights.</p>
-                <a href="#contact" class="btn">Request a Demo</a>
-                <a href="#features" class="btn btn-secondary">Learn More</a>
-            </div>
-        </section>
+  <section class="hero">
+    <div class="container">
+      <h1>Fintech Loyalty. Built for Trust.</h1>
+      <p>PESOLINK powers modern loyalty experiences with WhatsApp, QR codes, and real-time CoDi engagement — all backed by enterprise-grade infrastructure.</p>
+      <div class="cta">
+        <a href="#contact" class="btn">Request Demo</a>
+      </div>
+    </div>
+  </section>
 
-        <section class="features" id="features">
-            <div class="container">
-                <h2>Transforming Loyalty with PESOLINK</h2>
-                <div class="feature-grid">
-                    <div class="feature">
-                        <h3>📈 Data-Driven Insights</h3>
-                        <p>Leverage rich customer data to understand behaviors and preferences, enabling truly personalized engagement.</p>
-                    </div>
-                    <div class="feature">
-                        <h3>💬 Real-time Engagement</h3>
-                        <p>Connect with customers instantly via WhatsApp, delivering timely offers and immediate rewards, just like the TED Talk emphasizes.</p>
-                    </div>
-                    <div class="feature">
-                        <h3>🔗 Seamless API Integration</h3>
-                        <p>Easily integrate our powerful API into your existing systems for a smooth and efficient loyalty program rollout.</p>
-                    </div>
-                    <div class="feature">
-                        <h3>📱 Mobile-First Experience</h3>
-                        <p>Customers engage directly through WhatsApp, eliminating the need for app downloads and plastic cards, as predicted in the TED Talk.</p>
-                    </div>
-                     <div class="feature">
-                        <h3>🎁 Personalized Rewards</h3>
-                        <p>Offer tailored discounts and unique experiences that resonate with individual customers, driving true emotional loyalty.</p>
-                    </div>
-                     <div class="feature">
-                        <h3>🎮 Gamification Ready</h3>
-                        <p>Integrate fun and interactive elements to keep customers engaged and delighted on their loyalty journey.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="success-story" id="success-stories">
-            <div class="container">
-                <h2>Our First Success Story: BRASAS EL GORDO</h2>
-                <p>We are proud to partner with BRASAS EL GORDO, a testament to the power of PESOLINK in action.</p>
-                <img src="https://via.placeholder.com/200x80?text=BRASAS+EL+GORDO+LOGO" alt="Brasas El Gordo Logo" class="client-logo">
-                <blockquote>
-                    "Integrating PESOLINK has revolutionized our customer engagement. We've seen a noticeable increase in repeat visits and our customers love the ease of earning and redeeming rewards through WhatsApp. PESOLINK truly helps us build stronger connections."
-                </blockquote>
-                <p class="testimonial-author">- BRASAS EL GORDO Management</p>
-                <a href="#contact" class="btn">Become a Success Story</a>
-            </div>
-        </section>
-
-        <section class="features fintech-edge">
-            <div class="container">
-                <h2>The PESOLINK Advantage: Built for Trust and Performance</h2>
-                <div class="feature-grid">
-                    <div class="feature">
-                        <h3>🔒 Advanced Security</h3>
-                        <p>Your data and transactions are protected with JWT authentication, IP whitelisting, and robust webhook signature verification.</p>
-                    </div>
-                    <div class="feature">
-                        <h3>⚡ High Performance & Scalability</h3>
-                        <p>Engineered with FastAPI, PostgreSQL, and Redis to handle high volumes and scale seamlessly with your business growth.</p>
-                    </div>
-                    <div class="feature">
-                        <h3>🛠️ Resilient Architecture</h3>
-                        <p>Circuit breakers and a dead-letter queue ensure uninterrupted service and reliable message delivery, even under stress.</p>
-                    </div>
-                     <div class="feature">
-                        <h3>🌐 Global Ready</h3>
-                        <p>Designed to support international operations and compliance standards, ready for your expansion.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-section" id="contact">
-            <div class="container">
-                <h2>Ready to Transform Your Customer Loyalty?</h2>
-                <p>Partner with PESOLINK and start building deeper relationships that drive lasting business growth.</p>
-                <a href="/contact.html" class="btn">Get in Touch Today</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p class="copyright">&copy; 2024 PESOLINK. All rights reserved.</p>
-            <ul>
-                <li><a href="/privacy.html">Privacy Policy</a></li>
-                <li><a href="/terms.html">Terms of Service</a></li>
-                <li><a href="/data-deletion.html">Data Deletion Request</a></li>
-                <li><a href="/contact.html">Contact Us</a></li>
-            </ul>
+  <section id="features">
+    <div class="container">
+      <h2>Why Businesses Choose PESOLINK</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>📱 WhatsApp-Based</h3>
+          <p>Frictionless customer onboarding, point balance checks, and redemptions via WhatsApp.</p>
         </div>
-    </footer>
+        <div class="card">
+          <h3>⚡ Real-Time Rewards</h3>
+          <p>Trigger recognition instantly at the moment of purchase using CoDi or QR verification.</p>
+        </div>
+        <div class="card">
+          <h3>🔐 Bank-Grade Security</h3>
+          <p>Encrypted data, JWT tokens, and webhook signature validation built-in.</p>
+        </div>
+        <div class="card">
+          <h3>📊 Insight-Driven Loyalty</h3>
+          <p>Track spend, preferences, redemption patterns — turn data into smarter loyalty.</p>
+        </div>
+        <div class="card">
+          <h3>🎯 Fully API-Driven</h3>
+          <p>Integrate loyalty into your POS, CRM, website, or app with developer-friendly docs.</p>
+        </div>
+        <div class="card">
+          <h3>🇲🇽 Made for Mexico</h3>
+          <p>Optimized for CoDi, STP, and digital adoption in the Mexican retail economy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="success" id="success">
+    <div class="container">
+      <h2>Customer Spotlight: Brasas El Gordo</h2>
+      <img src="https://via.placeholder.com/160x60?text=Brasas+El+Gordo" alt="Brasas El Gordo logo">
+      <blockquote>
+        "Our customers love the simplicity. They just scan, buy, and earn. PESOLINK has doubled our return visits."
+      </blockquote>
+      <cite>— Management, Brasas El Gordo</cite>
+    </div>
+  </section>
+
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <h2>Bring Loyalty into the Fintech Age</h2>
+      <p>Let’s talk about how PESOLINK can help your business increase customer retention and grow revenue with every transaction.</p>
+      <a href="/contact.html" class="btn">Get in Touch</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 PESOLINK. All rights reserved.</p>
+    <p>
+      <a href="/privacy.html">Privacy</a> |
+      <a href="/terms.html">Terms</a> |
+      <a href="/data-deletion.html">Data Deletion</a> |
+      <a href="/contact.html">Contact</a>
+    </p>
+  </footer>
 </body>
 </html>
