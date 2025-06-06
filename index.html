@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peso.link - WhatsApp Customer Loyalty Platform</title>
-    <meta name="description" content="Earn points, get rewards through WhatsApp messaging. Customer loyalty platform for restaurants in Mexico.">
+    <title>PESOLINK: Intelligent Loyalty Platform for Businesses</title>
+    <meta name="description" content="PESOLINK empowers businesses with a modern, API-driven loyalty platform to foster genuine customer relationships, drive repeat purchases, and gain valuable insights.">
     <style>
         /* Reset and Base Styles */
         * {
@@ -17,6 +17,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #333;
+            background-color: #f0f2f5; /* Light grey background for a modern feel */
         }
 
         .container {
@@ -28,7 +29,7 @@
         /* Header */
         header {
             background: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* Slightly stronger shadow */
             position: sticky;
             top: 0;
             z-index: 100;
@@ -44,154 +45,245 @@
             align-items: center;
         }
 
-        nav h1 {
+        nav .logo {
             color: #25D366;
             text-decoration: none;
             font-size: 1.8rem;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo svg {
+            margin-right: 8px;
+            fill: #25D366;
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem; /* Increased gap for better spacing */
         }
 
         nav a {
             text-decoration: none;
-            color: #333;
+            color: #555; /* Slightly softer color */
             font-weight: 500;
-            transition: color 0.3s;
+            transition: color 0.3s ease, transform 0.2s ease; /* Added transform for subtle hover effect */
         }
 
         nav a:hover,
         nav a.active {
             color: #25D366;
+            transform: translateY(-2px);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #25D366, #128C7E);
+            background: linear-gradient(135deg, #128C7E, #25D366); /* Darker green first for depth */
             color: white;
-            padding: 4rem 0;
+            padding: 6rem 0; /* More vertical padding */
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before { /* Subtle background pattern/texture */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.1"><path d="M3 0L6 3L3 6L0 3L3 0Z"></path></g></svg>');
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem; /* Larger heading */
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            font-size: 1.35rem; /* Larger paragraph */
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .btn {
             display: inline-block;
             background: white;
             color: #25D366;
-            padding: 12px 30px;
+            padding: 14px 35px; /* Larger buttons */
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Added shadow for depth */
         }
 
         .btn:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px); /* More pronounced lift */
+            background-color: #e0e0e0; /* Subtle background change on hover */
         }
 
-        /* Features Section */
-        .features {
-            padding: 4rem 0;
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            margin-left: 1rem;
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 5rem 0; /* Consistent padding for all sections */
+            position: relative;
+        }
+
+        section:nth-of-type(odd) {
             background: #f8f9fa;
         }
 
-        .features h2 {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2.5rem;
+        section:nth-of-type(even) {
+            background: white;
         }
 
+        section h2 {
+            text-align: center;
+            margin-bottom: 3.5rem; /* More space below headings */
+            font-size: 2.8rem; /* Larger section headings */
+            color: #2c3e50; /* Darker, professional heading color */
+        }
+
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Feature Grid */
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem; /* Increased gap */
         }
 
         .feature {
             background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2.5rem; /* More padding */
+            border-radius: 12px; /* Slightly more rounded corners */
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Refined shadow */
             text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px); /* Lift on hover */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
         .feature h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem; /* Larger feature titles */
             margin-bottom: 1rem;
+            color: #25D366; /* Green for feature titles */
+        }
+
+        .feature p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Success Story Section */
+        .success-story {
+            background: #e6f7ed; /* Light green background */
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .success-story h2 {
+            color: #128C7E;
+        }
+
+        .success-story .client-logo {
+            max-width: 200px;
+            margin: 0 auto 2rem auto;
+            filter: grayscale(100%); /* Optional: Make client logos grayscale until hover */
+            transition: filter 0.3s ease;
+        }
+
+        .success-story .client-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        .success-story blockquote {
+            font-size: 1.4rem;
+            font-style: italic;
+            max-width: 900px;
+            margin: 0 auto 2rem auto;
+            color: #444;
+        }
+
+        .success-story .testimonial-author {
+            font-weight: bold;
+            font-size: 1.1rem;
             color: #333;
         }
 
-        /* How to Join Section */
-        .how-to-join {
-            padding: 4rem 0;
-            background: white;
+        /* Fintech Edge Section */
+        .fintech-edge .feature {
+            background: #fff;
+            border: 1px solid #eee;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+        .fintech-edge .feature h3 {
+            color: #3498db; /* Blue for fintech features */
         }
 
-        .how-to-join h2 {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2.5rem;
-            color: #25D366;
-        }
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .step {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .step-number {
-            background: #25D366;
+        /* Call to Action Section */
+        .cta-section {
+            background: linear-gradient(45deg, #128C7E, #25D366);
             color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0 auto 1rem auto;
-        }
-
-        .whatsapp-demo {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
             text-align: center;
-            margin: 2rem 0;
+            padding: 6rem 0;
         }
 
-        .whatsapp-demo h3 {
-            color: #25D366;
-            margin-bottom: 1rem;
+        .cta-section h2 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
         }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
 
         /* Footer */
         footer {
-            background: #333;
+            background: #2c3e50; /* Darker footer */
             color: white;
-            padding: 2rem 0;
+            padding: 3rem 0; /* More padding */
             text-align: center;
         }
 
@@ -200,6 +292,11 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+        }
+
+        footer .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
 
         footer ul {
@@ -212,11 +309,12 @@
             color: white;
             text-decoration: none;
             opacity: 0.8;
-            transition: opacity 0.3s;
+            transition: opacity 0.3s ease;
         }
 
         footer a:hover {
             opacity: 1;
+            text-decoration: underline;
         }
 
         /* Responsive */
@@ -227,24 +325,40 @@
             }
 
             nav ul {
-                gap: 1rem;
+                gap: 1.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            section h2 {
                 font-size: 2rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .success-story blockquote {
+                font-size: 1.2rem;
             }
 
             footer .container {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 1.5rem;
             }
 
             footer ul {
                 gap: 1rem;
-            }
-
-            .steps {
-                grid-template-columns: 1fr;
+                flex-wrap: wrap;
+                justify-content: center;
             }
         }
     </style>
@@ -253,13 +367,17 @@
     <header>
         <nav>
             <div class="container">
-                <h1>Peso.link</h1>
+                <a href="/" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                    PESOLINK
+                </a>
                 <ul>
                     <li><a href="/" class="active">Home</a></li>
-                    <li><a href="/privacy">Privacy Policy</a></li>
-                    <li><a href="/terms">Terms of Service</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="/data-deletion">Delete Data</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#success-stories">Clients</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/privacy.html">Privacy</a></li>
+                    <li><a href="/terms.html">Terms</a></li>
                 </ul>
             </div>
         </nav>
@@ -268,92 +386,99 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>Customer Loyalty Platform</h1>
-                <p>Earn points, get rewards through WhatsApp messaging</p>
-                <a href="#how-it-works" class="btn">Learn More</a>
+                <h1>PESOLINK: Beyond Points. Building Lasting Customer Loyalty.</h1>
+                <p>Empower your business with an intelligent, API-driven loyalty platform that fosters genuine relationships, drives repeat purchases, and unlocks valuable insights.</p>
+                <a href="#contact" class="btn">Request a Demo</a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
             </div>
         </section>
 
-        <section class="features" id="how-it-works">
+        <section class="features" id="features">
             <div class="container">
-                <h2>How It Works</h2>
+                <h2>Transforming Loyalty with PESOLINK</h2>
                 <div class="feature-grid">
                     <div class="feature">
-                        <h3>💬 Chat on WhatsApp</h3>
-                        <p>Connect with participating restaurants through WhatsApp messaging. No app downloads required!</p>
+                        <h3>📈 Data-Driven Insights</h3>
+                        <p>Leverage rich customer data to understand behaviors and preferences, enabling truly personalized engagement.</p>
                     </div>
                     <div class="feature">
-                        <h3>🎯 Earn Points</h3>
-                        <p>Get loyalty points for every purchase you make. 1 point per peso spent at participating locations.</p>
+                        <h3>💬 Real-time Engagement</h3>
+                        <p>Connect with customers instantly via WhatsApp, delivering timely offers and immediate rewards, just like the TED Talk emphasizes.</p>
                     </div>
                     <div class="feature">
-                        <h3>🎁 Redeem Rewards</h3>
-                        <p>Use your points for discounts, free items, and exclusive offers. Start redeeming from just 100 points!</p>
+                        <h3>🔗 Seamless API Integration</h3>
+                        <p>Easily integrate our powerful API into your existing systems for a smooth and efficient loyalty program rollout.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>📱 Mobile-First Experience</h3>
+                        <p>Customers engage directly through WhatsApp, eliminating the need for app downloads and plastic cards, as predicted in the TED Talk.</p>
+                    </div>
+                     <div class="feature">
+                        <h3>🎁 Personalized Rewards</h3>
+                        <p>Offer tailored discounts and unique experiences that resonate with individual customers, driving true emotional loyalty.</p>
+                    </div>
+                     <div class="feature">
+                        <h3>🎮 Gamification Ready</h3>
+                        <p>Integrate fun and interactive elements to keep customers engaged and delighted on their loyalty journey.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="how-to-join">
+        <section class="success-story" id="success-stories">
             <div class="container">
-                <h2>Join in 3 Easy Steps</h2>
-                
-                <div class="steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Send a Message</h3>
-                        <p>Text "JOIN" or "UNIRSE" to our WhatsApp Business number</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Complete Registration</h3>
-                        <p>Follow the simple prompts to set up your loyalty account</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Start Earning</h3>
-                        <p>Make purchases and watch your points grow automatically!</p>
-                    </div>
-                </div>
-
-                <div class="whatsapp-demo">
-                    <h3>📱 WhatsApp Commands</h3>
-                    <p><strong>PUNTOS</strong> - Check your balance<br>
-                    <strong>CANJEAR</strong> - See available rewards<br>
-                    <strong>AYUDA</strong> - Get help and support</p>
-                </div>
+                <h2>Our First Success Story: BRASAS EL GORDO</h2>
+                <p>We are proud to partner with BRASAS EL GORDO, a testament to the power of PESOLINK in action.</p>
+                <img src="https://via.placeholder.com/200x80?text=BRASAS+EL+GORDO+LOGO" alt="Brasas El Gordo Logo" class="client-logo">
+                <blockquote>
+                    "Integrating PESOLINK has revolutionized our customer engagement. We've seen a noticeable increase in repeat visits and our customers love the ease of earning and redeeming rewards through WhatsApp. PESOLINK truly helps us build stronger connections."
+                </blockquote>
+                <p class="testimonial-author">- BRASAS EL GORDO Management</p>
+                <a href="#contact" class="btn">Become a Success Story</a>
             </div>
         </section>
 
-        <section class="features">
+        <section class="features fintech-edge">
             <div class="container">
-                <h2>Why Choose Peso.link?</h2>
+                <h2>The PESOLINK Advantage: Built for Trust and Performance</h2>
                 <div class="feature-grid">
                     <div class="feature">
-                        <h3>🔒 Secure & Private</h3>
-                        <p>Your data is encrypted and protected. We comply with international privacy standards.</p>
+                        <h3>🔒 Advanced Security</h3>
+                        <p>Your data and transactions are protected with JWT authentication, IP whitelisting, and robust webhook signature verification.</p>
                     </div>
                     <div class="feature">
-                        <h3>📱 No App Required</h3>
-                        <p>Use WhatsApp, which you already have. No additional downloads or registrations needed.</p>
+                        <h3>⚡ High Performance & Scalability</h3>
+                        <p>Engineered with FastAPI, PostgreSQL, and Redis to handle high volumes and scale seamlessly with your business growth.</p>
                     </div>
                     <div class="feature">
-                        <h3>🎯 Instant Rewards</h3>
-                        <p>Get instant point updates and redeem rewards immediately. No waiting periods!</p>
+                        <h3>🛠️ Resilient Architecture</h3>
+                        <p>Circuit breakers and a dead-letter queue ensure uninterrupted service and reliable message delivery, even under stress.</p>
+                    </div>
+                     <div class="feature">
+                        <h3>🌐 Global Ready</h3>
+                        <p>Designed to support international operations and compliance standards, ready for your expansion.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="cta-section" id="contact">
+            <div class="container">
+                <h2>Ready to Transform Your Customer Loyalty?</h2>
+                <p>Partner with PESOLINK and start building deeper relationships that drive lasting business growth.</p>
+                <a href="/contact.html" class="btn">Get in Touch Today</a>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Peso.link. All rights reserved.</p>
+            <p class="copyright">&copy; 2024 PESOLINK. All rights reserved.</p>
             <ul>
-                <li><a href="/privacy">Privacy Policy</a></li>
-                <li><a href="/terms">Terms of Service</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/data-deletion">Delete Data</a></li>
+                <li><a href="/privacy.html">Privacy Policy</a></li>
+                <li><a href="/terms.html">Terms of Service</a></li>
+                <li><a href="/data-deletion.html">Data Deletion Request</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
             </ul>
         </div>
     </footer>
