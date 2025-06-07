@@ -2,93 +2,181 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
   <title>PESOLINK: Elevate Loyalty. Empower Relationships.</title>
   <meta name="description" content="PESOLINK is the premium fintech loyalty platform built for digitally savvy brands and consumers in Mexico. API-driven, mobile-first, and WhatsApp-powered.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
-    <nav class="nav-bar">
-      <a href="/" class="logo">PESOLINK</a>
-      <ul class="nav-links">
+  <!-- Enhanced Navigation -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <div class="navbar-left">
+        <a href="/" class="navbar-logo">PESOLINK</a>
+        
+        <ul class="navbar-links">
+          <li><a href="/">Personal</a></li>
+          <li><a href="/business">Business</a></li>
+        </ul>
+      </div>
+
+      <div class="navbar-right">
+        <ul class="navbar-links navbar-secondary">
+          <li><a href="#features">Why PESOLINK</a></li>
+          <li><a href="#success">Success</a></li>
+        </ul>
+
+        <a href="#contact" class="navbar-btn">Request Access</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-header">
+      <a href="/" class="navbar-logo">PESOLINK</a>
+      <button class="close-btn" id="closeBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="/">Personal</a></li>
+        <li><a href="/business">Business</a></li>
         <li><a href="#features">Why PESOLINK</a></li>
         <li><a href="#success">Success</a></li>
       </ul>
-      <a href="#contact" class="btn nav-cta">Request Access</a>
     </nav>
-  </header>
+
+    <div class="mobile-cta">
+      <a href="#contact" class="navbar-btn">Request Access</a>
+    </div>
+  </div>
 
   <main>
-  <section class="hero">
-    <div class="hero-text">
-      <h1 class="animate-slide-up" style="animation-delay: 0.1s;">Elevate Loyalty. Empower Relationships.</h1>
-      <p class="animate-slide-up" style="animation-delay: 0.25s;">
-        PESOLINK is the fintech loyalty platform for modern brands. API-driven. WhatsApp-native. CoDi-enabled. Built for Mexico.
-      </p>
-      <a href="#contact" class="btn animate-slide-up" style="animation-delay: 0.4s;">Request Access</a>
-    </div>
-  </section>
+    <header class="hero-header">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text-section">
+            <div class="hero-spacer-top"></div>
+            <h1 class="hero-title animate-slide-up">
+              Elevate Loyalty.<br>
+              Empower Relationships.
+            </h1>
+            <p class="hero-description-desktop animate-slide-up">
+              Say goodbye to clunky point systems. Say goodbye to app downloads and friction. Say goodbye to <br>
+              generic rewards. Say goodbye to loyalty that doesn't scale. Say hello to PESOLINK.
+            </p>
+            <p class="hero-description-mobile">
+              Say goodbye to clunky point systems. Say goodbye to app downloads and friction. Say goodbye to generic rewards. Say goodbye to loyalty that doesn't scale. Say hello to PESOLINK.
+            </p>
+            <div class="hero-spacer-bottom"></div>
+            <button class="hero-cta-mobile">Request Access</button>
+          </div>
+          <div class="hero-spacer-image"></div>
+          <img src="https://via.placeholder.com/400x600/25D366/white?text=PESOLINK+App" alt="PESOLINK application" class="hero-image">
+        </div>
+      </div>
+    </header>
 
-    <section id="features" style="background-color: #25D366;">
-      <h2 style="color: #1c1c1c">Why Businesses Choose PESOLINK</h2>
+    <section id="features">
+      <h2>Why Businesses Choose PESOLINK</h2>
       <div class="container feature-grid">
-        <div class="feature"><h3>📱 WhatsApp-Based</h3><p>Frictionless onboarding, balance checks, and redemptions — all via WhatsApp. No apps. No friction.</p></div>
-        <div class="feature"><h3>⚡ Real-Time Rewards</h3><p>Trigger recognition instantly at purchase using CoDi, QR, or integrated APIs.</p></div>
-        <div class="feature"><h3>🔐 Bank-Grade Security</h3><p>Encrypted data, JWT tokens, webhook signature verification — security at the core.</p></div>
-        <div class="feature"><h3>📊 Insight-Driven Loyalty</h3><p>Track spend, redemption, and preferences. Design smarter, more profitable campaigns.</p></div>
-        <div class="feature"><h3>🎯 Fully API-Driven</h3><p>Integrate loyalty into your POS, CRM, e-commerce, or kiosk systems — fast.</p></div>
-        <div class="feature"><h3>🇲🇽 Made for Mexico</h3><p>Built for CoDi, STP, and the realities of the Mexican digital economy.</p></div>
+        <div class="feature">
+          <h3>📱 WhatsApp-Based</h3>
+          <p>Frictionless onboarding, balance checks, and redemptions — all via WhatsApp. No apps. No friction.</p>
+        </div>
+        <div class="feature">
+          <h3>⚡ Real-Time Rewards</h3>
+          <p>Trigger recognition instantly at purchase using CoDi, QR, or integrated APIs.</p>
+        </div>
+        <div class="feature">
+          <h3>🔐 Bank-Grade Security</h3>
+          <p>Encrypted data, JWT tokens, webhook signature verification — security at the core.</p>
+        </div>
+        <div class="feature">
+          <h3>📊 Insight-Driven Loyalty</h3>
+          <p>Track spend, redemption, and preferences. Design smarter, more profitable campaigns.</p>
+        </div>
+        <div class="feature">
+          <h3>🎯 Fully API-Driven</h3>
+          <p>Integrate loyalty into your POS, CRM, e-commerce, or kiosk systems — fast.</p>
+        </div>
+        <div class="feature">
+          <h3>🇲🇽 Made for Mexico</h3>
+          <p>Built for CoDi, STP, and the realities of the Mexican digital economy.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-hero">
+      <div class="stats-container">
+        <div class="stats-number">
+          <span class="stats-percent">84</span><span class="stats-symbol">%</span>
+        </div>
+        <div class="stats-content">
+          <h2 class="stats-title">
+            <span class="stats-highlight">increase</span> in customer retention
+            for businesses with <span class="stats-highlight">effective</span>
+            loyalty programs.
+          </h2>
+          <p class="stats-source">Harvard Business Review</p>
+          <div class="stats-spacer"></div>
+          <button class="stats-cta">
+            Request Access
+            <svg class="stats-arrow" fill="none" viewBox="0 0 33 33">
+              <path d="M12.169 24.031a1.6 1.6 0 0 1 0-2.262l5.268-5.269-5.268-5.269a1.6 1.6 0 0 1 2.263-2.262l6.4 6.4a1.6 1.6 0 0 1 0 2.262l-6.4 6.4a1.6 1.6 0 0 1-2.263 0Z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
 
     <section id="success">
-      
       <div class="container testimonial">
         <h2>Merchant Success Story</h2>
         <img src="/assets/images/Menu(1%20de%202)%20(18%20x%2030%20in)%20(14%20x%208.5%20in)%20(3).png" alt="Brasas El Gordo logo">
         <blockquote>
-          “We integrated PESOLINK to offer real-time rewards with QR and CoDi — and customers love it. Our team saves time, redemptions are instant, and our loyalty has become a true competitive edge.”
+          "We integrated PESOLINK to offer real-time rewards with QR and CoDi — and customers love it. Our team saves time, redemptions are instant, and our loyalty has become a true competitive edge."
         </blockquote>
         <cite>— Management, Brasas El Gordo</cite>
       </div>
     </section>
 
-  <section id="contact">
-    <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2rem;">
-      <div style="flex: 1; min-width: 260px; text-align: left;">
-        <h2 style="font-size: 2.6rem; color: white; margin-bottom: 1rem;">Let’s Build  <span style="color: #25D366;">Loyalty</span> That Matters.</h2>
-        <div style="display: flex; justify-content: center; margin-top: 1.5rem;">
+    <section id="contact">
+      <div class="container">
+        <h2>Let's Build <span style="color: #25D366;">Loyalty</span> That Matters.</h2>
+        <div style="margin-top: 2rem;">
           <a href="/contact.html" class="btn">Start Your Journey</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
-    <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
+    <div class="container">
       <a href="#" class="footer-logo">PESOLINK</a>
-      <div style="flex: 1; text-align: right;">
-        <p style="margin: 0;">&copy; 2024 PESOLINK. All rights reserved.</p>
-        <ul style="display: flex; gap: 1.5rem; justify-content: flex-end; list-style: none; padding: 0; margin: 0.5rem 0 0;">
-        <li><a href="/legal.html">Legal</a></li>
-        
+      <div>
+        <p>&copy; 2024 PESOLINK. All rights reserved.</p>
+        <ul>
+          <li><a href="/legal.html">Legal</a></li>
           <li><a href="/contact.html">Contact Us</a></li>
         </ul>
       </div>
     </div>
   </footer>
 
-  <script>
-    window.addEventListener('scroll', () => {
-      const header = document.querySelector('header');
-      if (window.scrollY > 10) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

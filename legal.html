@@ -8,48 +8,154 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-  <header>
-    <nav class="nav-bar">
-      <a href="/" class="logo">PESOLINK</a>
-      <ul class="nav-links">
+<body class="legal-page">
+  <!-- Enhanced Navigation -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <div class="navbar-left">
+        <a href="/" class="navbar-logo">PESOLINK</a>
+        
+        <ul class="navbar-links">
+          <li><a href="/">Personal</a></li>
+          <li><a href="/business">Business</a></li>
+        </ul>
+      </div>
+
+      <div class="navbar-right">
+        <ul class="navbar-links navbar-secondary">
+          <li><a href="/#features">Why PESOLINK</a></li>
+          <li><a href="/#success">Success</a></li>
+        </ul>
+
+        <a href="#contact" class="navbar-btn">Request Access</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-header">
+      <a href="/" class="navbar-logo">PESOLINK</a>
+      <button class="close-btn" id="closeBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="/">Personal</a></li>
+        <li><a href="/business">Business</a></li>
         <li><a href="/#features">Why PESOLINK</a></li>
         <li><a href="/#success">Success</a></li>
       </ul>
-      <a href="/#contact" class="btn nav-cta">Request Access</a>
     </nav>
-  </header>
 
-  <main>
-    <div class="container legal-wrapper">
-      <h1 class="legal-title animate-slide-up">Legal Terms & Policies</h1>
+    <div class="mobile-cta">
+      <a href="#contact" class="navbar-btn">Request Access</a>
+    </div>
+  </div>
 
-      <div class="legal-columns">
-        <div class="legal-section">
-          <h3><span class="legal-icon">📄</span> PESOLINK Consumer</h3>
-          <ul class="legal-links">
-            <li class="animate-slide-left" style="animation-delay: 0.1s;">Mexico – Terms and Conditions (Consumer)</li>
-            <li class="animate-slide-left" style="animation-delay: 0.2s;">Mexico – Privacy Policy (Consumer)</li>
-          </ul>
+  <main class="legal-main">
+    <div class="legal-spacer-top"></div>
+    
+    <div class="legal-container">
+      <h1 class="legal-page-title animate-slide-up">
+        Legal Terms &amp; Policies
+      </h1>
+      
+      <div class="legal-spacer-middle"></div>
+      
+      <div class="legal-sections">
+        <!-- PESOLINK Personal Section -->
+        <div class="legal-category">
+          <div class="legal-category-header">
+            <div class="legal-icon-container">
+              <svg class="legal-icon" fill="none" viewBox="0 0 16 13">
+                <path d="M5 .712a.787.787 0 1 0 0 1.575V.712Zm10 1.575a.787.787 0 1 0 0-1.575v1.575ZM1 .712a.787.787 0 1 0 0 1.575V.712Zm1 1.575A.788.788 0 0 0 2 .712v1.575ZM1 5.712a.788.788 0 0 0 0 1.575V5.712Zm1 1.575a.787.787 0 1 0 0-1.575v1.575Zm-1 3.425a.788.788 0 0 0 0 1.575v-1.575Zm1 1.575a.787.787 0 1 0 0-1.575v1.575Zm3-6.575a.787.787 0 1 0 0 1.575V5.712Zm10 1.575a.787.787 0 1 0 0-1.575v1.575ZM5 10.712a.788.788 0 0 0 0 1.575v-1.575Zm10 1.575a.787.787 0 1 0 0-1.575v1.575Zm-10-10h10V.712H5v1.575Zm-4 0h1V.712H1v1.575Zm0 5h1V5.712H1v1.575Zm0 5h1v-1.575H1v1.575Zm4-5h10V5.712H5v1.575Zm0 5h10v-1.575H5v1.575Z"/>
+              </svg>
+            </div>
+            <h3 class="legal-category-title">PESOLINK Personal</h3>
+          </div>
+          
+          <div class="legal-links">
+            <a href="/docs/terms-personal.pdf" target="_blank" class="legal-link animate-slide-left">
+              Mexico - Terms and Conditions - Platform (Personal)
+              <svg class="legal-arrow" fill="none" viewBox="0 0 16 12">
+                <path d="M9.233 10.457a.75.75 0 1 0 1.034 1.086l-1.034-1.086Zm6.284-3.914a.75.75 0 1 0-1.034-1.086l1.034 1.086Zm-1.034 0a.75.75 0 1 0 1.034-1.086l-1.034 1.086ZM10.267.457a.75.75 0 1 0-1.034 1.086L10.267.457ZM15 6.75a.75.75 0 0 0 0-1.5v1.5ZM1 5.25a.75.75 0 0 0 0 1.5v-1.5Zm9.267 6.293 5.25-5-1.034-1.086-5.25 5 1.034 1.086Zm5.25-6.086-5.25-5-1.034 1.086 5.25 5 1.034-1.086ZM15 5.25H1v1.5h14v-1.5Z"/>
+              </svg>
+            </a>
+            
+            <a href="/docs/terms-loyalty-personal.pdf" target="_blank" class="legal-link animate-slide-left">
+              Mexico - Terms and Conditions - Loyalty Program (Personal)
+              <svg class="legal-arrow" fill="none" viewBox="0 0 16 12">
+                <path d="M9.233 10.457a.75.75 0 1 0 1.034 1.086l-1.034-1.086Zm6.284-3.914a.75.75 0 1 0-1.034-1.086l1.034 1.086Zm-1.034 0a.75.75 0 1 0 1.034-1.086l-1.034 1.086ZM10.267.457a.75.75 0 1 0-1.034 1.086L10.267.457ZM15 6.75a.75.75 0 0 0 0-1.5v1.5ZM1 5.25a.75.75 0 0 0 0 1.5v-1.5Zm9.267 6.293 5.25-5-1.034-1.086-5.25 5 1.034 1.086Zm5.25-6.086-5.25-5-1.034 1.086 5.25 5 1.034-1.086ZM15 5.25H1v1.5h14v-1.5Z"/>
+              </svg>
+            </a>
+            
+            <a href="/docs/privacy-personal.pdf" target="_blank" class="legal-link animate-slide-left">
+              Mexico - Privacy Policy - (Personal)
+              <svg class="legal-arrow" fill="none" viewBox="0 0 16 12">
+                <path d="M9.233 10.457a.75.75 0 1 0 1.034 1.086l-1.034-1.086Zm6.284-3.914a.75.75 0 1 0-1.034-1.086l1.034 1.086Zm-1.034 0a.75.75 0 1 0 1.034-1.086l-1.034 1.086ZM10.267.457a.75.75 0 1 0-1.034 1.086L10.267.457ZM15 6.75a.75.75 0 0 0 0-1.5v1.5ZM1 5.25a.75.75 0 0 0 0 1.5v-1.5Zm9.267 6.293 5.25-5-1.034-1.086-5.25 5 1.034 1.086Zm5.25-6.086-5.25-5-1.034 1.086 5.25 5 1.034-1.086ZM15 5.25H1v1.5h14v-1.5Z"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
-        <div class="legal-section">
-          <h3><span class="legal-icon">📄</span> PESOLINK Business</h3>
-          <ul class="legal-links">
-            <li class="animate-slide-left" style="animation-delay: 0.1s;"><a href="/docs/privacy.html" target="_blank"></a>Mexico – Terms and Conditions (Business)</li>
-            <li class="animate-slide-left" style="animation-delay: 0.2s;">Mexico – Privacy Policy (Business)</li>
-          </ul>
+        <!-- PESOLINK Business Section -->
+        <div class="legal-category">
+          <div class="legal-category-header">
+            <div class="legal-icon-container">
+              <svg class="legal-icon" fill="none" viewBox="0 0 16 13">
+                <path d="M5 .712a.787.787 0 1 0 0 1.575V.712Zm10 1.575a.787.787 0 1 0 0-1.575v1.575ZM1 .712a.787.787 0 1 0 0 1.575V.712Zm1 1.575A.788.788 0 0 0 2 .712v1.575ZM1 5.712a.788.788 0 0 0 0 1.575V5.712Zm1 1.575a.787.787 0 1 0 0-1.575v1.575Zm-1 3.425a.788.788 0 0 0 0 1.575v-1.575Zm1 1.575a.787.787 0 1 0 0-1.575v1.575Zm3-6.575a.787.787 0 1 0 0 1.575V5.712Zm10 1.575a.787.787 0 1 0 0-1.575v1.575ZM5 10.712a.788.788 0 0 0 0 1.575v-1.575Zm10 1.575a.787.787 0 1 0 0-1.575v1.575Zm-10-10h10V.712H5v1.575Zm-4 0h1V.712H1v1.575Zm0 5h1V5.712H1v1.575Zm0 5h1v-1.575H1v1.575Zm4-5h10V5.712H5v1.575Zm0 5h10v-1.575H5v1.575Z"/>
+              </svg>
+            </div>
+            <h3 class="legal-category-title">PESOLINK Business</h3>
+          </div>
+          
+          <div class="legal-links">
+            <a href="/docs/terms-business.pdf" target="_blank" class="legal-link animate-slide-left">
+              Mexico - Terms and Conditions - Platform (Business)
+              <svg class="legal-arrow" fill="none" viewBox="0 0 16 12">
+                <path d="M9.233 10.457a.75.75 0 1 0 1.034 1.086l-1.034-1.086Zm6.284-3.914a.75.75 0 1 0-1.034-1.086l1.034 1.086Zm-1.034 0a.75.75 0 1 0 1.034-1.086l-1.034 1.086ZM10.267.457a.75.75 0 1 0-1.034 1.086L10.267.457ZM15 6.75a.75.75 0 0 0 0-1.5v1.5ZM1 5.25a.75.75 0 0 0 0 1.5v-1.5Zm9.267 6.293 5.25-5-1.034-1.086-5.25 5 1.034 1.086Zm5.25-6.086-5.25-5-1.034 1.086 5.25 5 1.034-1.086ZM15 5.25H1v1.5h14v-1.5Z"/>
+              </svg>
+            </a>
+            
+            <a href="/docs/terms-loyalty-business.pdf" target="_blank" class="legal-link animate-slide-left">
+              Mexico - Terms and Conditions - Loyalty Program (Business)
+              <svg class="legal-arrow" fill="none" viewBox="0 0 16 12">
+                <path d="M9.233 10.457a.75.75 0 1 0 1.034 1.086l-1.034-1.086Zm6.284-3.914a.75.75 0 1 0-1.034-1.086l1.034 1.086Zm-1.034 0a.75.75 0 1 0 1.034-1.086l-1.034 1.086ZM10.267.457a.75.75 0 1 0-1.034 1.086L10.267.457ZM15 6.75a.75.75 0 0 0 0-1.5v1.5ZM1 5.25a.75.75 0 0 0 0 1.5v-1.5Zm9.267 6.293 5.25-5-1.034-1.086-5.25 5 1.034 1.086Zm5.25-6.086-5.25-5-1.034 1.086 5.25 5 1.034-1.086ZM15 5.25H1v1.5h14v-1.5Z"/>
+              </svg>
+            </a>
+            
+            <a href="/docs/privacy-business.pdf" target="_blank" class="legal-link animate-slide-left">
+              Mexico - Privacy Policy - (Business)
+              <svg class="legal-arrow" fill="none" viewBox="0 0 16 12">
+                <path d="M9.233 10.457a.75.75 0 1 0 1.034 1.086l-1.034-1.086Zm6.284-3.914a.75.75 0 1 0-1.034-1.086l1.034 1.086Zm-1.034 0a.75.75 0 1 0 1.034-1.086l-1.034 1.086ZM10.267.457a.75.75 0 1 0-1.034 1.086L10.267.457ZM15 6.75a.75.75 0 0 0 0-1.5v1.5ZM1 5.25a.75.75 0 0 0 0 1.5v-1.5Zm9.267 6.293 5.25-5-1.034-1.086-5.25 5 1.034 1.086Zm5.25-6.086-5.25-5-1.034 1.086 5.25 5 1.034-1.086ZM15 5.25H1v1.5h14v-1.5Z"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
+      
+      <div class="legal-spacer-bottom"></div>
     </div>
   </main>
 
   <footer>
-    <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
-      <a href="#" class="footer-logo">PESOLINK</a>
-      <div style="flex: 1; text-align: right;">
-        <p style="margin: 0;">&copy; 2024 PESOLINK. All rights reserved.</p>
-        <ul style="display: flex; gap: 1.5rem; justify-content: flex-end; list-style: none; padding: 0; margin: 0.5rem 0 0;">
+    <div class="container">
+      <a href="/" class="footer-logo">PESOLINK</a>
+      <div>
+        <p>&copy; 2024 PESOLINK. All rights reserved.</p>
+        <ul>
           <li><a href="/legal.html">Legal</a></li>
           <li><a href="/contact.html">Contact Us</a></li>
         </ul>
@@ -57,15 +163,6 @@
     </div>
   </footer>
 
-  <script>
-    window.addEventListener('scroll', () => {
-      const header = document.querySelector('header');
-      if (window.scrollY > 10) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
