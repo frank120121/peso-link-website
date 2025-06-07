@@ -3,169 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elevate Loyalty. Empower Relationships.</title>
-  <meta name="description" content="PESOLINK empowers businesses with fintech-grade loyalty infrastructure: mobile-first, API-driven, and privacy-conscious." />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
-  <style>
-    :root {
-      --primary: #25D366;
-      --dark: #1b1f23;
-      --gray: #f0f2f5;
-      --light-gray: #fafbfc;
-      --accent-blue: #3498db;
-      --accent-green: #2ecc71;
-      --max-width: 1200px;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: var(--gray); color: #333; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
-
-    .container { max-width: var(--max-width); margin: auto; padding: 0 20px; }
-
-    header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 1000; }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 0; }
-    .logo { font-size: 1.8rem; font-weight: 700; color: var(--primary); }
-    nav ul { list-style: none; display: flex; gap: 2rem; }
-    nav li a { font-weight: 500; color: #555; transition: 0.2s ease-in-out; }
-    nav li a:hover { color: var(--primary); }
-
-    .hero {
-      background: linear-gradient(135deg, #0f7a6f, #1eaf53);
-      color: white;
-      padding: 6rem 0;
-      text-align: center;
-    }
-    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.3rem; max-width: 800px; margin: auto; opacity: 0.95; }
-    .hero .cta { margin-top: 2rem; }
-    .btn {
-      background: white; color: var(--primary);
-      padding: 0.9rem 2rem; border-radius: 50px; font-weight: 600;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s;
-    }
-    .btn:hover { transform: translateY(-3px); background: #eaeaea; }
-
-    section { padding: 5rem 0; }
-    section h2 { text-align: center; font-size: 2.4rem; margin-bottom: 2rem; }
-    .grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-
-    .card {
-      background: white; border-radius: 12px; padding: 2rem;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06); text-align: center;
-    }
-    .card h3 { color: var(--primary); margin-bottom: 1rem; }
-    .card p { color: #555; font-size: 1rem; }
-
-    .success { background: var(--light-gray); text-align: center; }
-    .success img { max-width: 160px; margin: 1rem auto; filter: grayscale(100%); transition: 0.3s; }
-    .success img:hover { filter: grayscale(0%); }
-    .success blockquote { font-size: 1.2rem; font-style: italic; margin: 1.5rem auto; max-width: 800px; color: #444; }
-    .success cite { font-weight: bold; font-size: 1rem; color: #333; display: block; margin-top: 1rem; }
-
-    .cta-section {
-      background: linear-gradient(45deg, #128C7E, #25D366); color: white;
-      text-align: center; padding: 5rem 1rem;
-    }
-    .cta-section h2 { font-size: 2.6rem; margin-bottom: 1rem; }
-    .cta-section p { font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: auto; }
-    .cta-section .btn { margin-top: 2rem; background: white; color: var(--primary); }
-
-    footer {
-      background: #1b1f23; color: #ccc; text-align: center;
-      padding: 3rem 1rem; font-size: 0.9rem;
-    }
-    footer a { color: #ccc; margin: 0 1rem; }
-    footer a:hover { color: white; text-decoration: underline; }
-  </style>
+  <title>PESOLINK: Elevate Loyalty. Empower Relationships.</title>
+  <meta name="description" content="PESOLINK is the premium fintech loyalty platform built for digitally savvy brands and consumers in Mexico. API-driven, mobile-first, and WhatsApp-powered.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header>
-    <nav class="container">
+    <nav class="nav-bar">
       <a href="/" class="logo">PESOLINK</a>
-      <ul>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#success">Success Stories</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="/privacy.html">Privacy</a></li>
-        <li><a href="/terms.html">Terms</a></li>
+      <ul class="nav-links">
+        <li><a href="#features">Why PESOLINK</a></li>
+        <li><a href="#success">Success</a></li>
       </ul>
+      <a href="#contact" class="btn nav-cta">Request Access</a>
     </nav>
   </header>
 
+  <main>
   <section class="hero">
-    <div class="container">
-      <h1>Elevate Loyalty. Empower Relationships.</h1>
-      <p>PESOLINK powers modern loyalty experiences with WhatsApp, QR codes, and real-time CoDi engagement — all backed by enterprise-grade infrastructure.</p>
-      <div class="cta">
-        <a href="#contact" class="btn">Request Demo</a>
-      </div>
+    <div class="hero-text">
+      <h1 class="animate-slide-up" style="animation-delay: 0.1s;">Elevate Loyalty. Empower Relationships.</h1>
+      <p class="animate-slide-up" style="animation-delay: 0.25s;">
+        PESOLINK is the fintech loyalty platform for modern brands. API-driven. WhatsApp-native. CoDi-enabled. Built for Mexico.
+      </p>
+      <a href="#contact" class="btn animate-slide-up" style="animation-delay: 0.4s;">Request Access</a>
     </div>
   </section>
 
-  <section id="features">
-    <div class="container">
-      <h2>Why Businesses Choose PESOLINK</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>📱 WhatsApp-Based</h3>
-          <p>Frictionless customer onboarding, point balance checks, and redemptions via WhatsApp.</p>
-        </div>
-        <div class="card">
-          <h3>⚡ Real-Time Rewards</h3>
-          <p>Trigger recognition instantly at the moment of purchase using CoDi or QR verification.</p>
-        </div>
-        <div class="card">
-          <h3>🔐 Bank-Grade Security</h3>
-          <p>Encrypted data, JWT tokens, and webhook signature validation built-in.</p>
-        </div>
-        <div class="card">
-          <h3>📊 Insight-Driven Loyalty</h3>
-          <p>Track spend, preferences, redemption patterns — turn data into smarter loyalty.</p>
-        </div>
-        <div class="card">
-          <h3>🎯 Fully API-Driven</h3>
-          <p>Integrate loyalty into your POS, CRM, website, or app with developer-friendly docs.</p>
-        </div>
-        <div class="card">
-          <h3>🇲🇽 Made for Mexico</h3>
-          <p>Optimized for CoDi, STP, and digital adoption in the Mexican retail economy.</p>
+    <section id="features" style="background-color: #25D366;">
+      <h2 style="color: #1c1c1c">Why Businesses Choose PESOLINK</h2>
+      <div class="container feature-grid">
+        <div class="feature"><h3>📱 WhatsApp-Based</h3><p>Frictionless onboarding, balance checks, and redemptions — all via WhatsApp. No apps. No friction.</p></div>
+        <div class="feature"><h3>⚡ Real-Time Rewards</h3><p>Trigger recognition instantly at purchase using CoDi, QR, or integrated APIs.</p></div>
+        <div class="feature"><h3>🔐 Bank-Grade Security</h3><p>Encrypted data, JWT tokens, webhook signature verification — security at the core.</p></div>
+        <div class="feature"><h3>📊 Insight-Driven Loyalty</h3><p>Track spend, redemption, and preferences. Design smarter, more profitable campaigns.</p></div>
+        <div class="feature"><h3>🎯 Fully API-Driven</h3><p>Integrate loyalty into your POS, CRM, e-commerce, or kiosk systems — fast.</p></div>
+        <div class="feature"><h3>🇲🇽 Made for Mexico</h3><p>Built for CoDi, STP, and the realities of the Mexican digital economy.</p></div>
+      </div>
+    </section>
+
+    <section id="success">
+      
+      <div class="container testimonial">
+        <h2>Merchant Success Story</h2>
+        <img src="/assets/images/Menu(1%20de%202)%20(18%20x%2030%20in)%20(14%20x%208.5%20in)%20(3).png" alt="Brasas El Gordo logo">
+        <blockquote>
+          “We integrated PESOLINK to offer real-time rewards with QR and CoDi — and customers love it. Our team saves time, redemptions are instant, and our loyalty has become a true competitive edge.”
+        </blockquote>
+        <cite>— Management, Brasas El Gordo</cite>
+      </div>
+    </section>
+
+  <section id="contact">
+    <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2rem;">
+      <div style="flex: 1; min-width: 260px; text-align: left;">
+        <h2 style="font-size: 2.6rem; color: white; margin-bottom: 1rem;">Let’s Build  <span style="color: #25D366;">Loyalty</span> That Matters.</h2>
+        <div style="display: flex; justify-content: center; margin-top: 1.5rem;">
+          <a href="/contact.html" class="btn">Start Your Journey</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="success" id="success">
-    <div class="container">
-      <h2>Success Stories</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="/assets/images/Menu(1%20de%202)%20(18%20x%2030%20in)%20(14%20x%208.5%20in)%20(3).png" alt="Brasas El Gordo logo" style="max-height: 60px; margin-bottom: 1rem;">
-          <blockquote>
-            "Our customers love the simplicity. They just scan, buy, and earn. PESOLINK has doubled our return visits."
-          </blockquote>
-          <cite>— Management, Brasas El Gordo</cite>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-section" id="contact">
-    <div class="container">
-      <h2>Bring Loyalty into the Fintech Age</h2>
-      <p>Let’s talk about how PESOLINK can help your business increase customer retention and grow revenue with every transaction.</p>
-      <a href="/contact.html" class="btn">Get in Touch</a>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 PESOLINK. All rights reserved.</p>
-    <p>
-      <a href="/privacy.html">Privacy</a> |
-      <a href="/terms.html">Terms</a> |
-      <a href="/data-deletion.html">Data Deletion</a> |
-      <a href="/contact.html">Contact</a>
-    </p>
+    <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
+      <a href="#" class="footer-logo">PESOLINK</a>
+      <div style="flex: 1; text-align: right;">
+        <p style="margin: 0;">&copy; 2024 PESOLINK. All rights reserved.</p>
+        <ul style="display: flex; gap: 1.5rem; justify-content: flex-end; list-style: none; padding: 0; margin: 0.5rem 0 0;">
+        <li><a href="/legal.html">Legal</a></li>
+        
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>

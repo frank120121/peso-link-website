@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal | PESOLINK</title>
+  <meta name="description" content="Legal documents for PESOLINK including terms and privacy policies.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav-bar">
+      <a href="/" class="logo">PESOLINK</a>
+      <ul class="nav-links">
+        <li><a href="/#features">Why PESOLINK</a></li>
+        <li><a href="/#success">Success</a></li>
+      </ul>
+      <a href="/#contact" class="btn nav-cta">Request Access</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container legal-wrapper">
+      <h1 class="legal-title animate-slide-up">Legal Terms & Policies</h1>
+
+      <div class="legal-columns">
+        <div class="legal-section">
+          <h3><span class="legal-icon">📄</span> PESOLINK Consumer</h3>
+          <ul class="legal-links">
+            <li class="animate-slide-left" style="animation-delay: 0.1s;">Mexico – Terms and Conditions (Consumer)</li>
+            <li class="animate-slide-left" style="animation-delay: 0.2s;">Mexico – Privacy Policy (Consumer)</li>
+          </ul>
+        </div>
+
+        <div class="legal-section">
+          <h3><span class="legal-icon">📄</span> PESOLINK Business</h3>
+          <ul class="legal-links">
+            <li class="animate-slide-left" style="animation-delay: 0.1s;"><a href="/docs/privacy.html" target="_blank"></a>Mexico – Terms and Conditions (Business)</li>
+            <li class="animate-slide-left" style="animation-delay: 0.2s;">Mexico – Privacy Policy (Business)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
+      <a href="#" class="footer-logo">PESOLINK</a>
+      <div style="flex: 1; text-align: right;">
+        <p style="margin: 0;">&copy; 2024 PESOLINK. All rights reserved.</p>
+        <ul style="display: flex; gap: 1.5rem; justify-content: flex-end; list-style: none; padding: 0; margin: 0.5rem 0 0;">
+          <li><a href="/legal.html">Legal</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
